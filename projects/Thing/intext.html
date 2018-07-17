@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Error Management in JavaScript</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        function siteComponent(func) {
+            return func();
+        }
+        
+        widget = () => {
+            return '<div>Hi there</div>';
+        }
+        
+        console.log(siteComponent(widget));
+    </script>
+</html>
