@@ -5,27 +5,27 @@ import Input from './input';
 import Content from './content';
 
 const INITIAL_STATE = {
-            color: '',
-            pluralNoun: '',
-            adjectiveOne: '',
-            celebOne: '',
+            'color': '',
+            'pluralNoun': '',
+            'adjectiveOne': '',
+            'celebOne': '',
             
-            adjectiveTwo: '',
-            nounOne: '',
-            numberOne: '',
-            numberTwo: '',
+            'adjectiveTwo': '',
+            'nounOne': '',
+            'numberOne': '',
+            'numberTwo': '',
             
-            nounTwo: '',
-            adjectiveThree: '',
-            celebTwo: '',
-            celebThree: '',
+            'nounTwo': '',
+            'adjectiveThree': '',
+            'celebTwo': '',
+            'celebThree': '',
             
-            adjectiveFour: '',
-            nounThree: '',
-            celebFour: '',
-            adjectiveFive: '',
+            'adjectiveFour': '',
+            'nounThree': '',
+            'celebFour': '',
+            'adjectiveFive': '',
             
-            contentVisible: false,
+            'contentVisible': false,
         };
         
 class Card extends Component {
@@ -79,7 +79,9 @@ class Card extends Component {
             <form onSubmit={this.handleFormSubmit} className="card">
                 <div className="card__inputs">
                 {
-                    inputData.map(data => Input((data), this.handleInputChange))
+                    inputData.map((data, index) => {
+                        return Input((data), this.handleInputChange, index)
+                    })
                 }
                 </div>
                 <button type="submit">{!this.state.contentVisible ? 'Generate Mad Lib' : 'Clear Mad Lib'}</button>
