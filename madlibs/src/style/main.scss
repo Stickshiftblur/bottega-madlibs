@@ -110,11 +110,13 @@
     
     &__generate {
         background-color: #00cb79;
+        transform: translateY(-300%);
         @include button;
     }
     
     &__clear {
         background-color: #45b0e5;
+        transform: translateY(50%);
         @include button;
     } 
     
